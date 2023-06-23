@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            abrirLoja()
+        });
+
+        function abrirLoja() {
+
+            var plataforma = navigator.userAgent.toLocaleLowerCase();
+            var link = "https://www.bing.com.br";
+
+            if (plataforma.includes("iphone") || plataforma.includes("ipad")) {
+                link = "itms-apps://apps.apple.com/br/app/bradesco-seguros/id1256508403"
+            }
+
+            if (plataforma.includes("android")) {
+                link = "market://details?id=br.com.bradseg.bscelular"
+            }
+            
+            window.location.href = link;
+            
+        };
+    </script>
+
+</body>
+
+</html>
